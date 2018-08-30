@@ -3,6 +3,9 @@
 Created on 2018年8月14日
 
 @author: Leo
+
+功能描述：异步webapp骨架，绑定本机的9000端口，开启服务
+
 '''
 #内建模块
 import logging; logging.basicConfig(level = logging.INFO)

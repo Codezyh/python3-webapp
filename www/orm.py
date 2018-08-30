@@ -2,13 +2,14 @@
 Created on 2018年8月28日
 
 @author: Leo
+
+功能描述：orm类，数据库底层操作
 '''
 #内建模块
 import sys
 import logging
 
 #第三方模块
-import asyncio
 import aiomysql
 
 def log(sql, args=()):
@@ -67,7 +68,7 @@ async def execute(sql, args):
             affect_count = cursor.rowcount()  
             await cursor.close()     
         except BaseException as e:
-            raise
+            raise e
                   
         return  affect_count       
 
